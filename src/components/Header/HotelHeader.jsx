@@ -12,6 +12,7 @@ const HotelHeader = () => {
             <option>Singel</option>
             <option>Double</option>
           </select>
+          
         </div>
         
         <div>

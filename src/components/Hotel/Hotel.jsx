@@ -1,31 +1,23 @@
 import React, { useEffect, useState } from "react";
-import axios,{Axios} from "axios";
-import './Hotel.css';
+import axios, { Axios } from "axios";
+import "./Hotel.css";
 import { Link } from "react-router-dom";
 import HotelHeader from "../Header/HotelHeader";
 
 const Hotel = () => {
- 
-  
   const handelBook = () => {
-   
     let useremail = localStorage.getItem("email");
     let userpassword = localStorage.getItem("password");
     console.log("click");
     if (useremail && userpassword) {
-      window.history.pushState({}, '', "/checkout");
-    window.location.reload()
-      
+      window.history.pushState({}, "", "/checkout");
+      window.location.reload();
+    } else {
+      window.history.pushState({}, "", "/login");
+      window.location.reload();
     }
-    else {
-      window.history.pushState({}, '', "/login");
-      window.location.reload()
-      
-    }
-    
-    
-  }
-   
+  };
+
   const [hotelData, setHotelData] = useState([]);
   useEffect(() => {
     fetchData();
@@ -43,7 +35,7 @@ const Hotel = () => {
   };
   return (
     <div>
-      <HotelHeader/>
+      <HotelHeader />
       <h1>Availabel Hotel</h1>
       <div>
         <div>
@@ -60,21 +52,21 @@ const Hotel = () => {
             } = post;
             return (
               <div key={hotel_name} className="M-div">
-                    <div className="S-style">
-                    <span>
+                <div className="S-style">
+                  <span>
                     <p>Hotel Name</p>
                     <h3>{hotel_name}</h3>
                   </span>
-                  
+
                   <span>
                     <p>Check In</p>
                     <h3>{check_in}</h3>
-                        </span>
-                        <span>
+                  </span>
+                  <span>
                     <p>Price</p>
                     <h3>{price_per_night}</h3>
-                        </span>
-                        <span>
+                  </span>
+                  <span>
                     <p>City</p>
                     <h3>{city}</h3>
                   </span>
@@ -85,17 +77,17 @@ const Hotel = () => {
                   <span>
                     <p>Room Type</p>
                     <h3>{room_type}</h3>
-                        </span>
-                        <span>
+                  </span>
+                  <span>
                     <p>Rating</p>
                     <h3>{rating}</h3>
                   </span>
-                  
+
                   <span>
                     <p>Guest</p>
                     <h3>{guests}</h3>
                   </span>
-                  
+
                   <div className="btnss">
                     <button id="books" type="submit" onClick={handelBook}>
                       Book

@@ -7,18 +7,7 @@ import React, { useEffect, useState } from "react";
 
 const Header = (props) => {
   
-  // const [fromvalue, setFromValue] = useState("");
-  // const [tovalue, setToValue] = useState("");
-  // const handeSearchData = () => {
-   
-  //   console.log(fromvalue );
-  //   console.log(tovalue);
-  //   const searching = (data) => {
-  //     return data.filter((item) => item.from.toLowerCase().includes(search))
-  //   }
-  
-  // }
-  
+
   
   return (
     <>

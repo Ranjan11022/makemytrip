@@ -7,6 +7,7 @@ const Checkout = (props) => {
   return (
     <>
       <div className="Main-div">
+        
         <div className="first">
           <h1>Fare Summary</h1>
           <div className="f-inside">
