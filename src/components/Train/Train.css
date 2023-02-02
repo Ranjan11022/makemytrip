@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding:0;
+}
+.T-div{
+    margin-top: 50px;
+    display: flex;
+    margin-left: 300px;
+    margin-bottom: 30px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    width: 45%;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 10px 22px 11px 6px rgba(0,0,0,0.3);
+    
+   
+}
+.T-style{
+    width: 700px;
+    border-radius: 10px;
+ margin-bottom: 20px;
+ margin-left: 40px;
+ margin-right: 50px;
+ padding: 20px 20px 20px 10px;
+
+ display: grid;
+ grid-template-columns: minmax(0,1fr) minmax(0,2fr) minmax(0,1fr);
+
+ gap: 20px ;
+
+   
+}
+#book{
+    background-color: rgba(128, 128, 128, 0.423);
+    color: #000;
+    font-weight: 750;
+    font-size: large;
+    padding: 15px 20px 30px 20px;
+    border-radius: 10px;
+    width: 140px;
+    height: 50px;
+
+}
+.T-btns{
+    display: flex;
+    flex-direction: column;
+    margin-left: 320px;
+    margin-top: 60px;
+}
