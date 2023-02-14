@@ -7,6 +7,7 @@ import Header from "../Header/Header";
 
 
 const Flight = () => {
+  
  
   const [flightData, setFlightData] = useState([]);
   useEffect(() => {
@@ -25,11 +26,17 @@ const Flight = () => {
     }
   };
   const handelBook = () => {
+    let useremail = localStorage.getItem("email");
+    let userpassword = localStorage.getItem("password");
     console.log("click");
-    
-    window.history.pushState({}, '', "/checkout");
-    window.location.reload()
-  }
+    if (useremail && userpassword) {
+      window.history.pushState({}, "", "/checkout");
+      window.location.reload();
+    } else {
+      window.history.pushState({}, "", "/login");
+      window.location.reload();
+    }
+  };
  
   return (
     <div>

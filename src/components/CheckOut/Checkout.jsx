@@ -16,6 +16,7 @@ const Checkout = (props) => {
               <h4>
                 <FaRupeeSign size={14}/>
                 5,257
+                
               </h4>
             </span>
             <span>
